@@ -14,4 +14,4 @@ telebot==0.0.4
 python-dotenv==0.20.0
 requests==2.27.1
 setuptools==57.0.0
-yarl==1.7.2
+
