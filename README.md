@@ -5,11 +5,12 @@ You need to set the API token of the bot, as well as the ID of the Telegram acco
 >_SECRET_TOKEN_ — bot API token
 
 >_USER_ID_ — ID Telegram of User, from which messages will be received (messages from other accounts are ignored)
+>_API_KEY_ - key for Tequila API connection
 
 
 <h2>How does it work</h2>
 
-The bot searches for air tickets in a given direction up to specified maximum price. The bot offers the user some input templates, according to which the following parameters will then be recognized: 
+The bot searches for air tickets in a given direction up to specified maximum price. The bot offers the user some input templates, according to which the following parameters will be then recognized: 
 <ul>
   <li>oneway or round flight
    <li> departure and arrival cities 
@@ -27,7 +28,7 @@ Example of input template:
 ><p>or <b>round direct Milan to anywhere </b></p>
 
 <br>
-<p>After successful request, the bot will return to the user with an example message:</p>
+<p>After successful request, the bot will return to the user with an offer to complete his booking on Kiwi website, message example:</p>
 
 
 >Hey! I found something interesting for you!
@@ -38,5 +39,5 @@ Example of input template:
 >Your PlaneTrip bot
 <br>
 
-_**In the future, the bot will be able to create a database for the user's wishlist, check directions from the wishlist on its own and notify the user when the price falls to allowed level.**_
+_**In the near future the bot will be able to create a database for the user's wishlist, check directions from the wishlist on its own and notify the user when the price falls to allowed level.**_
 
