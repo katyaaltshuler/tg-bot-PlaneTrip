@@ -22,8 +22,8 @@ dp = Dispatcher(bot)
 
 # ---------------Set Access----------------------------
 def auth(func):
-    """Set Access to the bot by User ID"""
-
+    """Set single Access to the bot by User ID"""
+    #---restriction is currently lifted up---
     async def wrapper(message):
         if message['from']['id'] != int(TELEGRAM_USER_ID):
             return await message.reply(msg.denied, reply=False)
@@ -34,21 +34,21 @@ def auth(func):
 
 # --------Offer a list of commands available------------
 @dp.message_handler(commands=['start'])
-@auth
+#@auth
 async def send_welcome(message: types.Message):
     await message.answer(msg.greeting, parse_mode='html', reply=False)
 
 
 # ---------Ask user's desired destination-------------------
 @dp.message_handler(lambda message: message.text.startswith('/search_destination'))
-@auth
+#@auth
 async def search_destination(message: types.Message):
     await message.answer(msg.ask_destination, parse_mode='html', reply=False)
 
 
 # ---------Ask date interval(+ days of stay if round), parse--------------
 @dp.message_handler(lambda message: 'round' in message.text.lower() or 'oneway' in message.text.lower())
-@auth
+#@auth
 async def set_date_interval(message: types.Message):
     try:
         valid.parse_first_message(message.text)
@@ -63,7 +63,7 @@ async def set_date_interval(message: types.Message):
 
 # --------------Ask lowest acceptable price, parse-------------------
 @dp.message_handler(lambda message: '/' in message.text or 'min' in message.text)
-@auth
+#@auth
 async def set_max_price(message: types.Message):
     await message.answer(msg.ask_price, parse_mode='html', reply=False)
     try:
@@ -75,7 +75,7 @@ async def set_max_price(message: types.Message):
 
 # --------Show request summary; last parse and send data to API---------------
 @dp.message_handler(lambda message: 'eur' in message.text.lower() or 'usd' in message.text.lower())
-@auth
+#@auth
 async def confirm_request(message: types.Message):
     try:
         valid.parse_last_message(message.text)
@@ -94,7 +94,7 @@ async def confirm_request(message: types.Message):
 
 # -----------------Final results got from API-------------------
 @dp.callback_query_handler(lambda call: True)
-@auth
+#@auth
 async def get_results(call):
     if call.message:
         if call.data == "get_results":
