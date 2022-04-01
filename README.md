@@ -4,7 +4,7 @@ You need to set the API token of the bot, as well as the ID of the Telegram acco
 
 >_SECRET_TOKEN_ — bot API token
 >
->_USER_ID_ — ID Telegram of User, from which messages will be received (messages from other accounts are ignored)
+>_USER_ID_ — ID Telegram of User, from which messages will be received (messages from other accounts are ignored) **restriction is currently lifted up**
 >
 >_API_KEY_ - secret key for Tequila API connection
 
