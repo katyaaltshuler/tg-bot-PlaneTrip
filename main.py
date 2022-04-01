@@ -110,7 +110,7 @@ async def get_results(call):
                                           f' departure on {departure_date} at a great price '
                                           f'{lowest_price} {currency.upper()}\nHurry up and <a href="{url}">'
                                           f'complete your booking here 🥝 </a>\n\nDon\'t like it? Start new '
-                                          f'/search_destination!\n\nwith love, PlaneTrip bot', parse_mode='html',
+                                          f'/search_destination!\n\nyour PlaneTrip bot', parse_mode='html',
                                           reply=False)
         else:
             await call.message.answer(msg.ask_destination, parse_mode='html', reply=False)
