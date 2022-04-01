@@ -1,4 +1,4 @@
-# telegram bot PlaneTrip
+# telegram PlaneTrip_bot
 <p>Telegram bot that searches for cheap flights using Tequila API. The bot applies text recognition using regular expressions.
 You need to set the API token of the bot, as well as the ID of the Telegram account in the environment variables:</p>
 
