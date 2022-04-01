@@ -40,5 +40,10 @@ Example of input template:
 >Your PlaneTrip bot
 <br>
 
+<p align="center">
+  <img src="QR-code/planetrip_qr.jpg" width="250" title="hover text">
+</p>
+
+
 _**In the near future the bot will be able to create a database for the user's wishlist, check directions from the wishlist on its own and notify the user when the price falls to allowed level.**_
 
